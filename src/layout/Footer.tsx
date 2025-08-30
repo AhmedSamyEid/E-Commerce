@@ -21,7 +21,6 @@ export default function Footer() {
             <FaInstagram />
           </div>
         </div>
-
         <div>
           <h3 className="font-semibold">Services</h3>
           {services.map((service) => (

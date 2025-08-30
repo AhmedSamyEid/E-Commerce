@@ -39,7 +39,7 @@ export default function Header() {
           <MdOutlineShoppingCart />
           <LuUser />
         </div>
-        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-2xl">
+        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-2xl cursor-pointer">
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
