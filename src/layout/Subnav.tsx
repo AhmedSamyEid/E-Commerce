@@ -11,14 +11,14 @@ export default function Subnav() {
   ];
   return (
     <div className=" hidden md:block py-2 bg-[#313030]">
-      <ul className="flex justify-around w-full">
+      <div className="flex justify-around w-full">
         {subnav.map((item) => (
           <li key={item.name} className="flex gap-2 font-semibold cursor-pointer ">
             <div className="text-3xl text-[#949393] ">{item.icon}</div>
             <div className="text-sm text-[#b8b6b6] ">{item.name}</div>
           </li>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
