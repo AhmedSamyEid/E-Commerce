@@ -2,6 +2,9 @@ import "@/style/globals.css";
 import type { Metadata } from "next";
 import Header from "@/layout/Header";
 import Footer from "@/layout/Footer";
+import Subnav from "@/layout/Subnav";
+import { CartProvider } from "@/modules/auth/cartcontext/components/CartProvider";
+import { WishlistProvider } from "@/modules/auth/wishlistprovider/hooks/useWishlistProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,9 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` antialiased`}>
-        <Header />
-        {children}
-        <Footer />
+        <WishlistProvider>
+          <CartProvider>
+            <Header />
+            <Subnav />
+            {children}
+            <Footer />
+          </CartProvider>
+        </WishlistProvider>
       </body>
     </html>
   );
