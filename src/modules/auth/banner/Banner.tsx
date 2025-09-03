@@ -5,7 +5,7 @@ export default function Banner() {
     w-full min-h-[632px] bg-cover bg-center flex flex-col
     items-start justify-center px-6 sm:px-12 md:px-[30px] gap-4 text-left
     bg-[url('/images/Banner-mbulie.webp')]
-    md:bg-[url('/images/banner.webp')]
+    md:bg-[url('/images/Banner.webp')]
   "
 >
       <div className="text-center md:text-start mb-30 ">

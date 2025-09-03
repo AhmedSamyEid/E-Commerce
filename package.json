@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "format": "^0.2.2",
     "lint": "^0.8.19",
     "next": "15.5.2",
     "react": "19.1.0",
