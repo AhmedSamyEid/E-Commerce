@@ -1,6 +1,6 @@
 "use client";
 
-import { useWishlist } from "@/modules/auth/wishlistprovider/hooks/useWishlistProvider";
+import { useWishlist } from "@/modules/wishlistprovider/hooks/useWishlistProvider";
 
 export default function TheFavorite() {
   const { wishlist, removeFromWishlist } = useWishlist();

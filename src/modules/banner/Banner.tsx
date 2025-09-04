@@ -1,13 +1,13 @@
 export default function Banner() {
   return (
-  <div
-  className="
+    <div
+      className="
     w-full min-h-[632px] bg-cover bg-center flex flex-col
     items-start justify-center px-6 sm:px-12 md:px-[30px] gap-4 text-left
     bg-[url('/images/Banner-mbulie.webp')]
     md:bg-[url('/images/Banner.webp')]
   "
->
+    >
       <div className="text-center md:text-start mb-30 ">
         <p className="text-lg text-gray-400 font-semibold">Pro. Beyond.</p>
         <h1 className="text-6xl md:text-7xl font-stretch-50% text-white ">iPhone 14 Pro</h1>

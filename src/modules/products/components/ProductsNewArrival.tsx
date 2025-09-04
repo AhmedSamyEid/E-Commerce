@@ -3,9 +3,9 @@ import Image from "next/image";
 import { CiHeart } from "react-icons/ci";
 import { useRouter } from "next/navigation";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { useCart } from "@/modules/auth/cartcontext/components/CartProvider";
-import { useProductSlider } from "@/modules/auth/products/hooks/useProductSlider";
-import { useWishlist } from "@/modules/auth/wishlistprovider/hooks/useWishlistProvider";
+import { useCart } from "@/modules/cartcontext/components/CartProvider";
+import { useProductSlider } from "@/modules/products/hooks/useProductSlider";
+import { useWishlist } from "@/modules/wishlistprovider/hooks/useWishlistProvider";
 
 export default function ProductsNewArrival() {
   const router = useRouter();

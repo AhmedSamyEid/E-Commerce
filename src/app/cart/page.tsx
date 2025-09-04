@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { FaTimes } from "react-icons/fa";
-import { useCart } from "@/modules/auth/cartcontext/components/CartProvider";
+import { useCart } from "@/modules/cartcontext/components/CartProvider";
 
 export default function CartPage() {
   const { cartItems, addToCart, removeFromCart } = useCart();

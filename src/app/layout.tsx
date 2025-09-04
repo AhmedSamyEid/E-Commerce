@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Header from "@/layout/Header";
 import Footer from "@/layout/Footer";
 import Subnav from "@/layout/Subnav";
-import { CartProvider } from "@/modules/auth/cartcontext/components/CartProvider";
-import { WishlistProvider } from "@/modules/auth/wishlistprovider/hooks/useWishlistProvider";
+import { CartProvider } from "@/modules/cartcontext/components/CartProvider";
+import { WishlistProvider } from "@/modules/wishlistprovider/hooks/useWishlistProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
