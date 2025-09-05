@@ -39,7 +39,7 @@ export default function Header() {
       <div className="  flex flex-wrap items-center justify-between py-6 px-15">
         <div className="flex items-center gap-6 md:w-auto">
           <Link href="/">
-            <Image src="/images/Logo.webp" alt="logo Cyber" width={90} height={40} />
+            <img src="/images/Logo.webp" alt="logo Cyber" width={90} height={40} />
           </Link>
           <div className="hidden  md:flex flex-1 md:flex-initial  items-center gap-2 px-2 py-1 rounded bg-[#F5F5F5]  ">
             <CiSearch className="text-[#9c9797] text-2xl " />
