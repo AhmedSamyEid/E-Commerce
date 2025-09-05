@@ -127,11 +127,11 @@ export default function Header() {
               </button>
               {open && (
                 <div className="absolute right-0 mt-2 w-40 bg-white shadow-lg rounded-lg overflow-hidden z-50">
-                  <Link href="/login" className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 transition" onClick={() => setOpen(false)}>
+                  <Link href="/auth/login" className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 transition" onClick={() => setOpen(false)}>
                     <MdLogin className="text-green-600" />
                     <span>Login</span>
                   </Link>
-                  <Link href="/signup" className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 transition" onClick={() => setOpen(false)}>
+                  <Link href="/auth/signup" className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 transition" onClick={() => setOpen(false)}>
                     <FaUserPlus className="text-blue-600" />
                     <span>Signup</span>
                   </Link>
