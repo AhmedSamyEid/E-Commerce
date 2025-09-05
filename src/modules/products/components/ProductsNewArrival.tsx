@@ -89,7 +89,7 @@ export default function ProductsNewArrival() {
             <Image src={product.image} alt={product.alt} width={160} height={160} className="object-cover mx-auto mb-4 rounded" />
             <p className="text-black mb-1 text-lg">{product.description}</p>
             <p className="font-bold">${product.price}</p>
-            <button onClick={() => handleBuyNow(product)} className="mt-2 bg-black cursor-pointer text-white px-4 py-1 rounded hover:bg-gray-800 transition">
+            <button onClick={() => handleBuyNow(product)} className="mt-2 bg-black cursor-pointer transition duration-300 ease-out text-white px-4 py-1 rounded hover:bg-gray-800 ">
               Buy Now
             </button>
           </div>

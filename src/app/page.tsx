@@ -1,5 +1,6 @@
 import Banner from "@/modules/banner/Banner";
 import Category from "@/modules/category/Category";
+import BannersPage from "@/modules/banners/BannersPage";
 import SmallerBanners from "@/modules/smallerbanners/SmallerBanners";
 import ProductsNewArrival from "@/modules/products/components/ProductsNewArrival";
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <SmallerBanners />
       <Category />
       <ProductsNewArrival />
+      <BannersPage />
     </>
   );
 }
