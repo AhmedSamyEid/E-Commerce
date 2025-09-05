@@ -13,7 +13,6 @@ export default function Login() {
         <div className="hidden md:flex items-center justify-center bg-blue-50">
           <Image src="/images/beatsnoop.webp" alt="Login Illustration" width={500} height={500} className="w-full h-auto object-contain p-8" />
         </div>
-
         <div className="p-10 flex flex-col justify-center">
           <h2 className="text-2xl font-bold mb-1">
             {"Log in to"} <span className="text-red-500">{"Cyber"}</span>
@@ -41,9 +40,7 @@ export default function Login() {
               <button type="submit" className="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 transition">
                 {"Log In"}
               </button>
-              <h2 className="text-red-500 text-sm hover:underline">
-                {"Forget Password?"}
-              </h2>
+              <h2 className="text-red-500 text-sm hover:underline">{"Forget Password?"}</h2>
             </div>
           </form>
         </div>
