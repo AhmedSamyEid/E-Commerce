@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Header from "@/layout/Header";
 import Footer from "@/layout/Footer";
 import Subnav from "@/layout/Subnav";
+import Providers from "@/providers/Providers";
 import { CartProvider } from "@/modules/cartcontext/components/CartProvider";
 import { WishlistProvider } from "@/modules/wishlistprovider/hooks/useWishlistProvider";
 
@@ -19,14 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` antialiased`}>
-        <WishlistProvider>
-          <CartProvider>
-            <Header />
-            <Subnav />
-            {children}
-            <Footer />
-          </CartProvider>
-        </WishlistProvider>
+        <Providers>
+          <WishlistProvider>
+            <CartProvider>
+              <Header />
+              <Subnav />
+              {children}
+              <Footer />
+            </CartProvider>
+          </WishlistProvider>
+        </Providers>
       </body>
     </html>
   );

@@ -1,8 +1,10 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import Cookies from "js-cookie";
+import { toast, ToastContainer } from "react-toastify";
 import { LuUser } from "react-icons/lu";
-import { CiSearch } from "react-icons/ci";
+import { CiSearch, CiLogout } from "react-icons/ci";
 import { useEffect, useRef, useState } from "react";
 import { MdOutlineShoppingCart, MdLogin } from "react-icons/md";
 import { FaRegHeart, FaBars, FaTimes, FaUserPlus } from "react-icons/fa";
@@ -17,11 +19,13 @@ const NavLinks = [
   { name: "Blog", href: "/blog" },
 ];
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const { cartItems } = useCart();
-  const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const { wishlist } = useWishlist();
   const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
   const menuRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -34,6 +38,12 @@ export default function Header() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  const handleLogout = () => {
+    localStorage.clear();
+    Cookies.remove("token");
+    toast.success("تم التسجيل الخروج بنجاح");
+    setUserMenuOpen(false);
+  };
   return (
     <header>
       <div className="  flex flex-wrap items-center justify-between py-6 px-15">
@@ -76,6 +86,10 @@ export default function Header() {
                   <FaUserPlus className="text-blue-600" />
                   <span>Signup</span>
                 </Link>
+                <button onClick={handleLogout} className="flex items-center w-full gap-2 px-4 py-2 cursor-pointer hover:bg-gray-100 transition">
+                  <CiLogout className="text-red-600" />
+                  <span>Logout</span>
+                </button>
               </div>
             )}
           </div>
@@ -121,6 +135,10 @@ export default function Header() {
                     <FaUserPlus className="text-blue-600" />
                     <span>Signup</span>
                   </Link>
+                  <button onClick={handleLogout} className="flex items-center gap-2 px-4 py-2 w-full cursor-pointer hover:bg-gray-100 transition">
+                    <CiLogout className="text-red-600" />
+                    <span>Logout</span>
+                  </button>
                 </div>
               )}
             </div>

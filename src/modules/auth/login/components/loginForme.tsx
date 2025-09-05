@@ -46,7 +46,6 @@ export default function Login() {
         </div>
       </div>
 
-      <ToastContainer position="top-right" autoClose={1000} />
     </div>
   );
 }
