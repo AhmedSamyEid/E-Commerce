@@ -21,50 +21,50 @@ export default function ProductsNewArrival() {
     },
     {
       id: 2,
-      alt: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
-      description: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
+      alt: "Blackmagic Pocket Cinema Camera 6K",
+      description: "Blackmagic Pocket Cinema Camera 6K",
       price: 2553,
       image: "/images/Iphone 14 pro (1).webp",
     },
     {
       id: 3,
-      alt: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
-      description: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
+      alt: "Apple Watch Series 9 GPS 41mm Starlight Aluminium Case",
+      description: "Apple Watch Series 9 GPS 41mm Starlight Aluminium Case",
       price: 400,
       image: "/images/Iphone 14 pro (2).webp",
     },
     {
       id: 4,
-      alt: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
-      description: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
+      alt: "AirPods Max Silver",
+      description: "AirPods Max Silver",
       price: 600,
       image: "/images/Iphone 14 pro (3).webp",
     },
     {
       id: 5,
-      alt: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
-      description: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
+      alt: "Samsug Galaxy Wathch 6 Classic 47 mm Black",
+      description: "Samsug Galaxy Wathch 6 Classic 47 mm Black",
       price: 300,
       image: "/images/Iphone 14 pro (4).webp",
     },
     {
       id: 6,
-      alt: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
-      description: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
+      alt: "Galaxy Z Fold5 Unlocked | 256GB | Phantom Black",
+      description: "Galaxy Z Fold5 Unlocked | 256GB | Phantom Black",
       price: 1750,
       image: "/images/Iphone 14 pro (5).webp",
     },
     {
       id: 7,
-      alt: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
-      description: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
+      alt: "Galaxy Buds FE Graphite",
+      description: "Galaxy Buds FE Graphite",
       price: 9999,
       image: "/images/Iphone 14 pro .webp",
     },
     {
       id: 8,
-      alt: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
-      description: "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
+      alt: "Apple iPad 9 10.2 64GB Wi-Fi Sliver (MK2L3) 2025",
+      description: "Apple iPad 9 10.2 64GB Wi-Fi Sliver (MK2L3) 2025",
       price: 375,
       image: "/images/Iphone 14 pro  (2).webp",
     },
@@ -87,7 +87,7 @@ export default function ProductsNewArrival() {
               <CiHeart className="absolute top-2 right-2 text-3xl text-[#707070] cursor-pointer p-1 rounded-full hover:text-white hover:bg-red-600 transition-all" />
             </button>
             <Image src={product.image} alt={product.alt} width={160} height={160} className="object-cover mx-auto mb-4 rounded" />
-            <p className="text-gray-600 mb-1 text-sm">{product.description}</p>
+            <p className="text-black mb-1 text-lg">{product.description}</p>
             <p className="font-bold">${product.price}</p>
             <button onClick={() => handleBuyNow(product)} className="mt-2 bg-black cursor-pointer text-white px-4 py-1 rounded hover:bg-gray-800 transition">
               Buy Now
