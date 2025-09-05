@@ -82,14 +82,14 @@ export default function ProductsNewArrival() {
     <div className="my-5">
       <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
-          <div key={product.id} className="bg-[#F6F6F6] p-4 rounded-lg shadow-md text-center relative transition-transform duration-300">
+          <div key={product.id} className="bg-[#F6F6F6] p-4 rounded-lg shadow-md flex flex-col text-center relative transition-transform duration-300">
             <button onClick={() => handleHeartClick(product)}>
               <CiHeart className="absolute top-2 right-2 text-3xl text-[#707070] cursor-pointer p-1 rounded-full hover:text-white hover:bg-red-600 transition-all" />
             </button>
             <Image src={product.image} alt={product.alt} width={160} height={160} className="object-cover mx-auto mb-4 rounded" />
             <p className="text-black mb-1 text-lg">{product.description}</p>
             <p className="font-bold">${product.price}</p>
-            <button onClick={() => handleBuyNow(product)} className="mt-2 bg-black cursor-pointer transition duration-300 ease-out text-white px-4 py-1 rounded hover:bg-gray-800 ">
+            <button onClick={() => handleBuyNow(product)} className="mt-auto bg-black cursor-pointer transition duration-300 ease-out text-white  py-2 rounded hover:bg-gray-800 ">
               Buy Now
             </button>
           </div>
