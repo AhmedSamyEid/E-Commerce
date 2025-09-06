@@ -7,7 +7,7 @@ export default function Subnav() {
     { name: "Phones", icon: <MdPhoneAndroid />, link: "/products" },
     { name: "Computers", icon: <RiComputerLine />, link: "/computers" },
     { name: "Cameras", icon: <MdCameraAlt />, link: "/cameras" },
-    { name: "Headphones", icon: <MdHeadsetMic />, link: "/products" },
+    { name: "Headphones", icon: <MdHeadsetMic />, link: "/headphones" },
     { name: "Gaming", icon: <RiComputerLine />, link: "/products" },
   ];
   return (
