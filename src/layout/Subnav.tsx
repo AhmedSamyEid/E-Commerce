@@ -5,7 +5,7 @@ import { MdPhoneAndroid, MdCameraAlt, MdHeadsetMic } from "react-icons/md";
 export default function Subnav() {
   const subnav = [
     { name: "Phones", icon: <MdPhoneAndroid />, link: "/products" },
-    { name: "Computers", icon: <RiComputerLine />, link: "/products" },
+    { name: "Computers", icon: <RiComputerLine />, link: "/computers" },
     { name: "Smart Watches", icon: <MdCameraAlt />, link: "/products" },
     { name: "Headphones", icon: <MdHeadsetMic />, link: "/products" },
     { name: "Gaming", icon: <RiComputerLine />, link: "/products" },
