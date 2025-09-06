@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function SmallerBanners() {
@@ -76,7 +77,9 @@ export default function SmallerBanners() {
           <div className="max-w-md">
             <h2 className="text-5xl font-normal mb-2">{item.title}</h2>
             <p className="text-sm text-gray-500 leading-6 max-w-[370px]">{item.description}</p>
-            <button className="mt-5 px-5 py-2 border cursor-pointer bg-transparent transition duration-300 ease-out border-black rounded-md hover:bg-black hover:text-white">Shop Now</button>
+            <Link href="/products">
+              <button className="mt-5 px-5 py-2 border cursor-pointer bg-transparent transition duration-300 ease-out border-black rounded-md hover:bg-black hover:text-white">Shop Now</button>
+            </Link>
           </div>
           <div className="relative w-[300px] h-[300px] hidden md:block">
             <Image src={item.desktopImage} alt={item.title} fill sizes="300px" className="rounded-lg object-contain" />

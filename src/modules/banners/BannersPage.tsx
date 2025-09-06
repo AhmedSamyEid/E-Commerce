@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function BannersPage() {
@@ -9,7 +10,9 @@ export default function BannersPage() {
           Big Summer <span className="font-bold">Sale</span>
         </h2>
         <p className="hidden md:block text-gray-500">Commodo fames vitae vitae leo mauris in. Eu consequat.</p>
-        <button className=" border  transition duration-300 ease-out mt-2 text-white py-3 px-7 cursor-pointer tr rounded-md hover:bg-black border-black">Shop Now</button>
+        <Link href="/products">
+          <button className=" border  transition duration-300 ease-out mt-2 text-white py-3 px-7 cursor-pointer tr rounded-md hover:bg-black border-black">Shop Now</button>
+        </Link>
       </div>
     </div>
   );
