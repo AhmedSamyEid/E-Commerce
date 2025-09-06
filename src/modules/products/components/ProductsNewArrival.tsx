@@ -95,12 +95,12 @@ export default function ProductsNewArrival() {
           </div>
         ))}
       </div>
-      <div className="relative md:hidden flex justify-center items-center">
+      <div className="relative md:hidden flex  justify-center items-center">
         <button onClick={scrollLeft} className="absolute left-2 top-0 z-10 bg-black text-white p-2 rounded-full shadow hover:bg-gray-800 transition">
           <IoIosArrowBack size={24} />
         </button>
         <div className="w-[220px]">
-          <div className="bg-[#F6F6F6] p-4 rounded-lg shadow-md text-center relative">
+          <div className="bg-[#F6F6F6] h-90 p-4 rounded-lg shadow-md text-center relative">
             <button onClick={() => handleHeartClick(products[currentIndex])}>
               <CiHeart className="absolute top-2 right-2 text-3xl text-[#707070] cursor-pointer p-1 rounded-full hover:text-white hover:bg-red-600 transition-all" />
             </button>
