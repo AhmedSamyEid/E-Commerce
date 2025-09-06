@@ -8,7 +8,7 @@ export default function Subnav() {
     { name: "Computers", icon: <RiComputerLine />, link: "/computers" },
     { name: "Cameras", icon: <MdCameraAlt />, link: "/cameras" },
     { name: "Headphones", icon: <MdHeadsetMic />, link: "/headphones" },
-    { name: "Gaming", icon: <RiComputerLine />, link: "/products" },
+    { name: "Gaming", icon: <RiComputerLine />, link: "/gaming" },
   ];
   return (
     <div className=" hidden md:block py-2 bg-[#313030]">
