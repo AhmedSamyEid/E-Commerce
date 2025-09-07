@@ -1,5 +1,9 @@
-type ColorType = { color: string; image: string };
-type ProductsPhonesTypes = {
+export type ColorType = {
+  color: string;
+  image: string;
+};
+
+export type ProductsPhonesTypes = {
   id: number;
   name: string;
   description: string;
@@ -7,6 +11,7 @@ type ProductsPhonesTypes = {
   oldPrice: number;
   colors: ColorType[];
   storage: string[];
+
   specs: {
     screen: string;
     cpu: string;
@@ -15,4 +20,10 @@ type ProductsPhonesTypes = {
     frontCamera: string;
     battery: string;
   };
+};
+export type CartProduct = ProductsPhonesTypes & {
+  selectedColor: string;
+  selectedStorage: string;
+  quantity: number;
+  image: string;
 };

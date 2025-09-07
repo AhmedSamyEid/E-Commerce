@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { GiProcessor } from "react-icons/gi";
 import { BsBatteryFull } from "react-icons/bs";
@@ -6,8 +7,9 @@ import { MdPhoneIphone } from "react-icons/md";
 import { useParams, useRouter } from "next/navigation";
 import { FaMicrochip, FaCameraRetro, FaCamera } from "react-icons/fa";
 import { useCart } from "@/modules/cartcontext/components/CartProvider";
+import { CartProduct, ColorType, ProductsPhonesTypes } from "@/modules/productsPhonespage/types/ProductsPhonesTypes";
 
-const products: ProductsPhonesTypes[] = [
+export const productsPhones: ProductsPhonesTypes[] = [
   {
     id: 1,
     name: "Apple iPhone 14 Pro Max",
@@ -157,7 +159,7 @@ const products: ProductsPhonesTypes[] = [
 export default function ProductDetails() {
   const params = useParams();
   const router = useRouter();
-  const product = products.find((p) => p.id === Number(params?.id));
+  const product = productsPhones.find((p) => p.id === Number(params?.id));
   const [selectedColor, setSelectedColor] = useState<ColorType | null>(null);
   const [selectedStorage, setSelectedStorage] = useState<string | null>(null);
   const { addToCart } = useCart();
@@ -175,21 +177,24 @@ export default function ProductDetails() {
     );
   }
   const imageForCart = selectedColor?.image ?? product.colors?.[0]?.image ?? "";
-  const handleBuyNow = () => {
-    addToCart({
-      ...product,
-      image: imageForCart,
-      selectedColor: selectedColor.color,
-      selectedStorage,
-      quantity: 1,
-    } as any);
-    router.push("/cart");
+const handleBuyNow = () => {
+  const cartItem: CartProduct = {
+    ...product,
+    image: imageForCart,
+    selectedColor: selectedColor.color,
+    selectedStorage,
+    quantity: 1,
   };
+
+  addToCart(cartItem);
+  router.push("/cart");
+};
+
 
   return (
     <div className="flex flex-col lg:flex-row gap-10 p-10">
       <div className="flex justify-center lg:w-1/2">
-        <img src={selectedColor.image} alt={product.name} className="w-[250px] h-[300px] object-cover rounded shadow-md" />
+        <Image src={selectedColor.image} alt={product.name} className="w-[250px] h-[300px] object-cover rounded shadow-md" />
       </div>
       <div className="flex-1">
         <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
