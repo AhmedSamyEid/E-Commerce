@@ -226,7 +226,7 @@ const handleBuyNow = () => {
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-2 gap-8 mb-6 text-sm items-center text-center text-black">
+        <div className="grid grid-cols-2 gap-8 mb-6 text-sm items-center text-center cursor-pointer text-black">
           <p className="flex items-center gap-2 bg-gray-200 w-40 h-10 rounded-lg">
             <MdPhoneIphone className="text-lg" /> Screen: {product.specs.screen}
           </p>
