@@ -2,10 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import Cookies from "js-cookie";
-import { toast, ToastContainer } from "react-toastify";
 import { LuUser } from "react-icons/lu";
 import { CiSearch, CiLogout } from "react-icons/ci";
 import { useEffect, useRef, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 import { MdOutlineShoppingCart, MdLogin } from "react-icons/md";
 import { FaRegHeart, FaBars, FaTimes, FaUserPlus } from "react-icons/fa";
 import { useCart } from "@/modules/cartcontext/components/CartProvider";
