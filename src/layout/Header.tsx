@@ -17,6 +17,7 @@ const NavLinks = [
   { name: "Services", href: "/services" },
   { name: "Contact US", href: "/contactus" },
   { name: "Blog", href: "/blog" },
+  { name: "Blog", href: "/blog" },
 ];
 export default function Header() {
   const { cartItems } = useCart();
