@@ -194,7 +194,7 @@ const handleBuyNow = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-10 p-10">
       <div className="flex justify-center lg:w-1/2">
-        <Image src={selectedColor.image} alt={product.name} className="w-[250px] h-[300px] object-cover rounded shadow-md" />
+        <Image src={selectedColor.image} alt={product.name} width={0} height={0} className="w-[250px] h-[300px] object-cover rounded shadow-md" />
       </div>
       <div className="flex-1">
         <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
@@ -209,7 +209,7 @@ const handleBuyNow = () => {
             <button
               key={c.color}
               onClick={() => setSelectedColor(c)}
-              className={`w-7 h-7 rounded-full border ${selectedColor.color === c.color ? "ring-2 ring-black" : ""}`}
+              className={`w-7 h-7 rounded-full border cursor-pointer ${selectedColor.color === c.color ? "ring-2 ring-black" : ""}`}
               style={{ backgroundColor: c.color }}
             />
           ))}
@@ -226,7 +226,7 @@ const handleBuyNow = () => {
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-2 gap-8 mb-6 text-sm items-center text-center cursor-pointer text-black">
+        <div className="grid grid-cols-2 gap-8 mb-6 text-sm items-center text-center text-black">
           <p className="flex items-center gap-2 bg-gray-200 w-40 h-10 rounded-lg">
             <MdPhoneIphone className="text-lg" /> Screen: {product.specs.screen}
           </p>
