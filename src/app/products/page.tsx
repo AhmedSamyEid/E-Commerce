@@ -1,4 +1,4 @@
-import ProductsPage from "@/modules/productspage/ProductsPage";
+import ProductsPage from "@/modules/productsPhonespage/components/ProductsPhonesPage";
 
 export default function Products() {
   return <ProductsPage />
