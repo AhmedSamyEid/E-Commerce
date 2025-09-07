@@ -177,19 +177,18 @@ export default function ProductDetails() {
     );
   }
   const imageForCart = selectedColor?.image ?? product.colors?.[0]?.image ?? "";
-const handleBuyNow = () => {
-  const cartItem: CartProduct = {
-    ...product,
-    image: imageForCart,
-    selectedColor: selectedColor.color,
-    selectedStorage,
-    quantity: 1,
+  const handleBuyNow = () => {
+    const cartItem: CartProduct = {
+      ...product,
+      image: imageForCart,
+      selectedColor: selectedColor.color,
+      selectedStorage,
+      quantity: 1,
+    };
+
+    addToCart(cartItem);
+    router.push("/cart");
   };
-
-  addToCart(cartItem);
-  router.push("/cart");
-};
-
 
   return (
     <div className="flex flex-col lg:flex-row gap-10 p-10">

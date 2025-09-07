@@ -29,7 +29,7 @@ export default function ComputersPage() {
     {
       id: 3,
       price: 399,
-      image: "/images/Coo.webp",
+      image: "/images/coo.webp",
       alt: "Sony WH-1000XM5 Headphones",
       description: "Sony WH-1000XM5 Wireless Noise Cancelling Headphones, 30 Hours Battery",
     },
