@@ -246,8 +246,8 @@ export default function ProductDetails() {
           </p>
         </div>
         <div className="flex gap-4 mb-6">
-          <button className="flex-1 py-3 bg-gray-200 hover:bg-gray-300 rounded">Add to Wishlist</button>
-          <button onClick={handleBuyNow} className="flex-1 py-3 bg-black text-white hover:bg-gray-800 rounded">
+          <button className="flex-1 py-3 cursor-pointer bg-gray-200 hover:bg-gray-300 rounded">Add to Wishlist</button>
+          <button onClick={handleBuyNow} className="flex-1 py-3 cursor-pointer bg-black text-white hover:bg-gray-800 rounded">
             Add to Cart
           </button>
         </div>
