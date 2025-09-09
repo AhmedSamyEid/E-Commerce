@@ -105,7 +105,14 @@ export default function ProductsPhonesPage() {
             <button onClick={() => handleHeartClick(products[currentIndex])}>
               <CiHeart className="absolute top-2 right-2 text-3xl text-[#707070] cursor-pointer p-1 rounded-full hover:text-white hover:bg-red-600 transition-all" />
             </button>
-            <Image src={products[currentIndex].image} alt={products[currentIndex].alt} width={160} height={160} className="object-cover mx-auto mb-4 rounded" />
+            <Image
+              onClick={() => router.push(`/productdetails/${products[currentIndex].id}`)}
+              src={products[currentIndex].image}
+              alt={products[currentIndex].alt}
+              width={160}
+              height={160}
+              className="object-cover mx-auto mb-4 rounded"
+            />
             <p className="text-gray-600 mb-1 text-sm">{products[currentIndex].description}</p>
             <p className="font-bold">${products[currentIndex].price}</p>
             <button onClick={() => handleBuyNow(products[currentIndex])} className="mt-2 cursor-pointer bg-black text-white px-4 py-1 rounded hover:bg-gray-800 transition">
