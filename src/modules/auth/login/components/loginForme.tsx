@@ -37,7 +37,7 @@ export default function Login() {
             {errors.password && <p className="text-red-600 font-bold">{errors.password.message}</p>}
 
             <div className="flex items-center justify-between mt-2">
-              <button type="submit" className="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 transition">
+              <button type="submit" className="bg-red-500 cursor-pointer text-white px-6 py-2 rounded hover:bg-red-600 transition">
                 {"Log In"}
               </button>
               <h2 className="text-red-500 text-sm hover:underline">{"Forget Password?"}</h2>

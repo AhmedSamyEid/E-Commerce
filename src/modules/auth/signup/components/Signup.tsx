@@ -37,7 +37,7 @@ export default function Signup() {
               placeholder={"Password"}
               className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <button type="submit" className="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 transition">
+            <button type="submit" className="w-full cursor-pointer bg-red-500 text-white py-2 rounded hover:bg-red-600 transition">
               {"Create Account"}
             </button>
             <div className="flex items-center justify-center gap-2 border border-gray-300 py-2 rounded cursor-pointer hover:bg-gray-100 transition">
